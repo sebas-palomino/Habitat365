@@ -737,7 +737,7 @@ header h2 {
     margin-bottom: 0.15rem;
 }
 
-header > div p {
+header>div p {
     font-size: 0.9rem;
     color: #d8e6df;
 }
@@ -780,7 +780,7 @@ header nav a[href="#sorteo"]:hover {
     text-align: center;
 }
 
-#sorteo > div:first-of-type {
+#sorteo>div:first-of-type {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0.55rem;
@@ -887,7 +887,7 @@ header nav a[href="#sorteo"]:hover {
     }
 }
 
- @media (max-width: 800px) {
+@media (max-width: 800px) {
     .header {
         padding: 15px 20px;
     }
@@ -1001,4 +1001,3 @@ header nav a[href="#sorteo"]:hover {
         grid-template-columns: repeat(3, 1fr);
     }
 }
-
