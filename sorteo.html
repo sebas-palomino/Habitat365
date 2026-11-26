@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones para Conjuntos Cerrados | Sorteo de Parqueaderos</title>
+    <script src="js/sorteo.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Encabezado y menú de navegación -->
+    <header>
+        <div>
+            <h2>CONJUNTO HABITACIONAL</h2>
+            <p>Soluciones administrativas para conjuntos cerrados</p>
+        </div>
+        <nav>
+            <a href="#sorteo">Sorteo de Parqueaderos</a>
+            <a href="#informacion">Información</a>
+            <a href="#contacto">Administración</a>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <section id="sorteo" class="hero">
+            <h1>Sorteo de Asignación de Parqueaderos</h1>
+            <p>Ingresa el número de apartamento y la placa del vehículo para participar en el sorteo aleatorio.</p>
+
+            <div>
+                <label for="apto">Apartamento:</label>
+                <input type="text" id="apto" placeholder="Ej: Apto 402">
+
+                <label for="placa">Placa del vehículo:</label>
+                <input type="text" id="placa" placeholder="Ej: ABC123">
+
+                <button type="button" id="btn-sortear">Realizar Sorteo</button>
+            </div>
+
+            <p id="resultado" class="tarjeta"></p>
+        </section>
+
+        <section id="informacion" class="seccion">
+            <h2>Asignación Justa y Transparente</h2>
+            <div class="cajas">
+                <div class="tarjeta">
+                    <h3>01. Registro</h3>
+                    <p>Cada residente registra su apartamento y la placa registrada de su carro.</p>
+                </div>
+                <div class="tarjeta">
+                    <h3>02. Sorteo Aleatorio</h3>
+                    <p>El sistema genera un resultado al azar para definir la asignación del cupo.</p>
+                </div>
+                <div class="tarjeta">
+                    <h3>03. Resultado</h3>
+                    <p>Se muestra de inmediato si el vehículo obtiene o no parqueadero en el turno.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página profesional -->
+    <footer id="contacto">
+        <div>
+            <h3>Conjunto Cerrado - Gestión Residencial</h3>
+            <p>Soluciones digitales para la convivencia y organización de conjuntos cerrados.</p>
+        </div>
+        <div>
+            <p><strong>Administración:</strong> administracion@conjunto-soluciones.com</p>
+            <p><strong>Horario de atención:</strong> Lunes a viernes de 8:00 a.m. a 5:00 p.m.</p>
+        </div>
+        <div>
+            <p>&copy; 2026 - Soluciones para Conjuntos Cerrados. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
