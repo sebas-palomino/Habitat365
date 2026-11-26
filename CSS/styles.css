@@ -327,6 +327,626 @@ footer .p-footer {
     }
 }
 
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7f5;
+    color: #111827;
+}
+
+.header {
+    background-color: #2d5a4c;
+    color: #ffffff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.header-titulo h1 {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.header-titulo p {
+    font-size: 14px;
+    color: #d8e6df;
+}
+
+.header_contenido {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid #ffffff;
+    padding: 6px 14px;
+    border-radius: 8px;
+}
+
+.menu-boton {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav_lista {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav_lista a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav_lista a:hover {
+    text-decoration: underline;
+}
+
+.nav_destacado {
+    background-color: #e39e4c;
+    color: #111827 !important;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+
+.contenedor {
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 24px;
+    max-width: 1050px;
+    align-items: flex-start;
+}
+
+.calendario {
+    flex: 2;
+    min-width: 0;
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+.cal-cabecera {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2d5a4c;
+    padding: 16px 0 18px;
+}
+
+.anio {
+    font-family: "Arial Black", Impact, sans-serif;
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.anillo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 6px solid #3db8ff;
+}
+
+.anillo.izq {
+    left: 7%;
+}
+
+.anillo.der {
+    right: 7%;
+}
+
+.cal-franja {
+    height: 16px;
+    background-color: #3db8ff;
+}
+
+.cal-cuerpo {
+    padding: 16px 20px 20px;
+}
+
+.mes-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.mes-nav h3 {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #111827;
+}
+
+.btn-nav {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #3db8ff;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-nav:hover {
+    background-color: #1593e6;
+}
+
+.dias-semana,
+.cuadricula {
+    display: grid;
+    grid-template-columns: 36px repeat(7, 1fr);
+}
+
+.dias-semana {
+    background-color: #3db8ff;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    padding: 8px 0;
+    margin-bottom: 8px;
+}
+
+.cuadricula {
+    row-gap: 4px;
+}
+
+.num-semana {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.dia {
+    position: relative;
+    min-height: 58px;
+    margin: 0 2px;
+    border: 3px solid transparent;
+    border-radius: 12px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: bold;
+    color: #111827;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.dia:hover:not(:disabled) {
+    background-color: #f1f5f9;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.dia.domingo {
+    color: #2d5a4c;
+}
+
+.dia.parcial {
+    background-color: #fef3c7;
+}
+
+.dia.lleno {
+    background-color: #fee2e2;
+}
+
+.dia.hoy {
+    border-color: #3db8ff;
+}
+
+.dia.hoy::before {
+    content: "HOY";
+    position: absolute;
+    top: 2px;
+    font-size: 9px;
+    font-weight: bold;
+    color: #1593e6;
+}
+
+.dia.seleccionado {
+    background-color: #3db8ff;
+    border-color: #3db8ff;
+    color: #ffffff;
+}
+
+.dia.seleccionado::before {
+    color: #ffffff;
+}
+
+.dia:disabled,
+.dia.pasado {
+    background-color: transparent;
+    color: #cbd5e1;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.dia.pasado.domingo {
+    color: #fecaca;
+}
+
+.puntos {
+    display: flex;
+    gap: 3px;
+}
+
+.punto {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.punto.verde {
+    background-color: #22c55e;
+}
+
+.punto.rojo {
+    background-color: #ef4444;
+}
+
+.leyenda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin-top: 18px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.leyenda span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cuadro {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+}
+
+.cuadro.parcial {
+    background-color: #fef3c7;
+    border: 1px solid #fcd34d;
+}
+
+.cuadro.lleno {
+    background-color: #fee2e2;
+    border: 1px solid #fca5a5;
+}
+
+.cal-pie {
+    background-color: #2d5a4c;
+    padding: 10px;
+    text-align: center;
+}
+
+.btn-hoy {
+    padding: 5px 20px;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-hoy:hover {
+    background-color: #ffffff;
+    color: #2d5a4c;
+}
+
+.panel {
+    flex: 1;
+    min-width: 280px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    padding: 20px;
+}
+
+.panel h3 {
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-bottom: 4px;
+}
+
+.panel .resumen {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.panel .placeholder {
+    text-align: center;
+    color: #64748b;
+    padding: 32px 8px;
+}
+
+.area {
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid #22c55e;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    background-color: #ffffff;
+}
+
+.area.ocupada {
+    border-left-color: #ef4444;
+    background-color: #fff7f7;
+}
+
+.area-cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.area-nombre {
+    font-weight: bold;
+}
+
+.btn-estado {
+    border: none;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #22c55e;
+}
+
+.btn-estado.ocupado {
+    background-color: #ef4444;
+}
+
+.area input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px 10px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.area input:focus {
+    outline: none;
+    border-color: #1593e6;
+}
+
+.btn-cerrar {
+    margin-top: 8px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    color: #333333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-cerrar:hover {
+    background-color: #e2e8f0;
+}
+
+footer {
+    background-color: #2d5a4c;
+    color: #ffffff;
+    padding: 25px 30px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 14px;
+}
+
+footer h3 {
+    margin-bottom: 6px;
+}
+
+@media (max-width: 800px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .calendario,
+    .panel {
+        width: 100%;
+        flex: none;
+    }
+
+    .cal-cuerpo {
+        padding: 12px 10px 16px;
+    }
+
+    .dias-semana,
+    .cuadricula {
+        grid-template-columns: 26px repeat(7, 1fr);
+    }
+
+    .dias-semana {
+        font-size: 13px;
+    }
+
+    .dia {
+        min-height: 46px;
+        font-size: 16px;
+        margin: 0 1px;
+    }
+
+    .punto {
+        width: 6px;
+        height: 6px;
+    }
+
+    .anillo {
+        width: 26px;
+        height: 26px;
+        border-width: 5px;
+    }
+}
+
+
+/* ===== PASO 13: Escritorio (1024px en adelante) ===== */
+@media (min-width: 1024px) {
+    .hero {
+        padding: 5rem 0;
+    }
+
+    .hero_contenido {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .tarjetas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+}
+
+ @media (max-width: 800px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .header_contenido {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .menu-boton {
+        display: block;
+    }
+
+    .header_contenido nav {
+        display: none;
+        width: 100%;
+    }
+
+    .header_contenido nav.activo {
+        display: block;
+    }
+
+    .nav_lista {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid #3f7564;
+    }
+
+    .nav_lista a {
+        display: block;
+        padding: 8px 10px;
+    }
+
+    .nav_destacado {
+        text-align: center;
+    }
+
+    .contenedor {
+        flex-direction: column;
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    .calendario,
+    .panel {
+        width: 100%;
+        flex: none;
+    }
+
+    .anio {
+        font-size: 40px;
+    }
+
+    .anillo {
+        width: 26px;
+        height: 26px;
+        border-width: 5px;
+    }
+
+    .cal-cuerpo {
+        padding: 12px 10px 16px;
+    }
+
+    .dias-semana,
+    .cuadricula {
+        grid-template-columns: 26px repeat(7, 1fr);
+    }
+
+    .dias-semana {
+        font-size: 13px;
+    }
+
+    .dia {
+        min-height: 46px;
+        font-size: 16px;
+        margin: 0 1px;
+    }
+
+    .punto {
+        width: 6px;
+        height: 6px;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
 /* ===== PASO 13: Escritorio (1024px en adelante) ===== */
 @media (min-width: 1024px) {
     .hero {
