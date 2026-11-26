@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva de Áreas de Recreación</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/reservas.js" defer></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-titulo">
+      <h1>🏡 Áreas de Recreación</h1>
+      <p>Selecciona un día para ver o cambiar la disponibilidad de cada área.</p>
+    </div>
+
+    <div class="header_contenido">
+      <a href="#inicio" class="logo">🏢 Hábitat365</a>
+      <button class="menu-boton" aria-label="Abrir menú">☰</button>
+      <nav>
+        <ul class="nav_lista">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#soluciones">Soluciones</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#contacto" class="nav_destacado">Pedir Demo</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <section class="calendario" aria-label="Calendario mensual">
+      <div class="cal-cabecera">
+        <span class="anillo izq"></span>
+        <h2 id="titulo-anio" class="anio">2026</h2>
+        <span class="anillo der"></span>
+      </div>
+
+      <div class="cal-franja"></div>
+
+      <div class="cal-cuerpo">
+        <div class="mes-nav">
+          <button id="btn-anterior" class="btn-nav" aria-label="Mes anterior">‹</button>
+          <h3 id="titulo-mes">Mes</h3>
+          <button id="btn-siguiente" class="btn-nav" aria-label="Mes siguiente">›</button>
+        </div>
+
+        <div class="dias-semana">
+          <span>SM</span><span>Lun</span><span>Mar</span><span>Mié</span>
+          <span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span>
+        </div>
+
+        <div id="cuadricula" class="cuadricula"></div>
+
+        <div class="leyenda">
+          <span><i class="punto verde"></i> Disponible</span>
+          <span><i class="punto rojo"></i> Ocupado</span>
+          <span><i class="cuadro parcial"></i> Parcialmente ocupado</span>
+          <span><i class="cuadro lleno"></i> Todo ocupado</span>
+        </div>
+      </div>
+
+      <div class="cal-pie">
+        <button id="btn-hoy" class="btn-hoy">Ir a hoy</button>
+      </div>
+    </section>
+
+    <aside class="panel" id="panel" aria-live="polite">
+    </aside>
+  </main>
+
+   <!-- Pie de página unificado de Hábitat365 -->
+    <footer id="contacto">
+        <div>
+            <h3>🏢 Hábitat365</h3>
+            <p>Soluciones digitales para la convivencia y organización de conjuntos cerrados.</p>
+        </div>
+        <div>
+            <p><strong>Administración:</strong> administracion@habitat365.com</p>
+            <p><strong>Horario de soporte:</strong> Lunes a sábado, 7:00 a.m. - 8:00 p.m.</p>
+        </div>
+        <p class="p-footer">&copy; 2026 Hábitat365 · Software hecho para vivir mejor en comunidad</p>
+    </footer>
+
+</body>
+</html>
