@@ -1,0 +1,348 @@
+/* ===== PASO 3: Reset y box-sizing ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== PASO 4: Tipografía base con unidades relativas ===== */
+html {
+    font-size: 100%; /* 1rem = 16px */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1f2e29; /* Verde muy oscuro para leer cómodo */
+    background-color: #f3f7f4; /* Fondo verde salvia muy claro y cálido */
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+h2 {
+    font-size: 1.75rem;
+    color: #2d5a4c; /* Verde bosque cálido */
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== PASO 5: Imágenes fluidas ===== */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== PASO 6: Contenedor ===== */
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ===== PASO 7: Encabezado y menú (móvil) ===== */
+.header {
+    background-color: #2d5a4c; /* Verde bosque cálido principal */
+    color: #f3f7f4;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(27, 56, 47, 0.18);
+}
+
+.header_contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.menu-boton {
+    background-color: transparent;
+    color: #f3f7f4;
+    border: 1px solid rgba(243, 247, 244, 0.55);
+    border-radius: 0.5rem;
+    padding: 0.35rem 0.7rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.header nav {
+    width: 100%;
+}
+
+.nav_lista {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+}
+
+.nav_lista.abierto {
+    display: flex;
+}
+
+.nav_lista a {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.nav_lista a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.nav_destacado {
+    background-color: #e39d5c; /* Acento terracota/arena cálida */
+    color: #1f2e29;
+    font-weight: 700;
+}
+
+.nav_destacado:hover {
+    background-color: #ebb078;
+}
+
+/* ===== PASO 8: Hero (móvil) ===== */
+.hero {
+    padding: 3rem 0;
+}
+
+.hero_contenido {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    color: #23473c;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    margin-bottom: 1.5rem;
+    color: #3b4f48;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #3d7a64; /* Verde salvia vivo */
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.boton:hover {
+    background-color: #2d5a4c;
+    transform: translateY(-2px);
+}
+
+.hero_imagen {
+    width: 100%;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 20px rgba(45, 90, 76, 0.15);
+}
+
+/* ===== PASO 9: Tarjetas de soluciones (móvil: 1 columna) ===== */
+.productos {
+    background-color: #ffffff;
+    padding: 3rem 0;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.tarjeta {
+    background-color: #f3f7f4; /* Mismo tono suave del fondo para armonía visual */
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(45, 90, 76, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tarjeta_cuerpo {
+    padding: 1rem 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.tarjeta h3 {
+    color: #2d5a4c;
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta p {
+    flex-grow: 1;
+    color: #3b4f48;
+}
+
+/* Quita el subrayado y mantiene los colores originales de la tarjeta */
+.tarjeta-enlace {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Permite que ocupe todo el espacio de la columna */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto visual cuando pasas el cursor (te paras) encima */
+.tarjeta-enlace:hover {
+    transform: translateY(-5px); /* Eleva ligeramente la tarjeta hacia arriba */
+    cursor: pointer;             /* Muestra la manito de enlace */
+}
+
+.precio {
+    display: block;
+    margin-top: 0.75rem;
+    font-weight: 700;
+    color: #3d7a64;
+}
+
+/* ===== PASO 10: Contacto y pie de página (móvil) ===== */
+.contacto {
+    padding: 3rem 0;
+}
+
+.contacto_grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contacto_bloque {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    border-bottom: 4px solid #6b9e8a; /* Línea verde salvia suave en la base */
+    box-shadow: 0 2px 8px rgba(45, 90, 76, 0.06);
+}
+
+.contacto_bloque h3 {
+    color: #2d5a4c;
+    margin-bottom: 0.25rem;
+}
+
+footer {
+    background-color: #2f5745;
+    color: white;
+    padding: 35px 8% 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+footer .p-footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.85rem;
+}
+
+/* ===== PASO 12: Tablet (768px en adelante) ===== */
+@media (min-width: 768px) {
+    .header_contenido {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .header nav {
+        width: auto;
+    }
+
+    .nav_lista {
+        display: flex;
+        flex-direction: row;
+        gap: 0.25rem;
+        padding-top: 0;
+    }
+
+    .nav_lista a {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contacto_grid {
+        flex-direction: row;
+    }
+
+    .contacto_bloque {
+        flex: 1;
+    }
+
+    .menu-boton {
+        display: none;
+    }
+
+    .grid-footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== PASO 13: Escritorio (1024px en adelante) ===== */
+@media (min-width: 1024px) {
+    .hero {
+        padding: 5rem 0;
+    }
+
+    .hero_contenido {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .tarjetas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
