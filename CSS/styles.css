@@ -449,7 +449,7 @@ body {
     height: 34px;
     border-radius: 50%;
     background-color: #ffffff;
-    border: 6px solid #3db8ff;
+    border: 6px solid #40c299;
 }
 
 .anillo.izq {
@@ -462,7 +462,7 @@ body {
 
 .cal-franja {
     height: 16px;
-    background-color: #3db8ff;
+    background-color: #40c299;
 }
 
 .cal-cuerpo {
@@ -488,7 +488,7 @@ body {
     height: 40px;
     border: none;
     border-radius: 50%;
-    background-color: #3db8ff;
+    background-color: #40c299;
     color: #ffffff;
     font-size: 24px;
     font-weight: bold;
@@ -496,7 +496,7 @@ body {
 }
 
 .btn-nav:hover {
-    background-color: #1593e6;
+    background-color: #40c299;
 }
 
 .dias-semana,
@@ -506,7 +506,7 @@ body {
 }
 
 .dias-semana {
-    background-color: #3db8ff;
+    background-color: #40c299;
     border-radius: 8px;
     color: #ffffff;
     font-weight: bold;
@@ -566,7 +566,7 @@ body {
 }
 
 .dia.hoy {
-    border-color: #3db8ff;
+    border-color: #40c299;
 }
 
 .dia.hoy::before {
@@ -579,8 +579,8 @@ body {
 }
 
 .dia.seleccionado {
-    background-color: #3db8ff;
-    border-color: #3db8ff;
+    background-color: #2d5a4c;
+    border-color: #2d5a4c;
     color: #ffffff;
 }
 
@@ -752,7 +752,7 @@ body {
 
 .area input:focus {
     outline: none;
-    border-color: #1593e6;
+    border-color: #2d5a4c;
 }
 
 .btn-cerrar {
