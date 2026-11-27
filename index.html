@@ -93,6 +93,53 @@
         <section class="contacto" id="contacto">
             <div class="contenedor">
                 <h2>Hablemos de tu conjunto</h2>
+                <div class="contenedor-formulario">
+                    <h3>Solicita tu demo gratuita</h3>
+                    <p>Déjanos tus datos y un asesor te contactará para configurar Hábitat365 en tu conjunto.</p>
+
+                    <form id="form-contacto" class="formulario-habitat">
+                        <div class="campo-grupo">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej. Camila Rodríguez" required>
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="conjunto">Nombre del conjunto residencial</label>
+                            <input type="text" id="conjunto" name="conjunto"
+                                placeholder="Ej. Conjunto Residencial El Roble" required>
+                        </div>
+
+                        <div class="campo-fila">
+                            <div class="campo-grupo">
+                                <label for="telefono">Teléfono / WhatsApp</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="300 123 4567" required>
+                            </div>
+
+                            <div class="campo-grupo">
+                                <label for="unidades">Cantidad de apartamentos</label>
+                                <select id="unidades" name="unidades" required>
+                                    <option value="" disabled selected>Selecciona un rango</option>
+                                    <option value="menos-50">Menos de 50</option>
+                                    <option value="50-150">Entre 50 y 150</option>
+                                    <option value="mas-150">Más de 150</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="mensaje">¿Qué herramienta te interesa más? (Opcional)</label>
+                            <textarea id="mensaje" name="mensaje" rows="3"
+                                placeholder="Ej. Me interesa automatizar el sorteo de parqueaderos y la reserva del salón social..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-enviar">Enviar solicitud</button>
+
+                        <!-- Mensaje oculto que aparecerá al enviar -->
+                        <p id="mensaje-exito" class="mensaje-exito" style="display: none;">
+                            ¡Listo! Hemos recibido tus datos. Pronto nos pondremos en contacto contigo.
+                        </p>
+                    </form>
+                </div>
                 <div class="contacto_grid">
                     <div class="contacto_bloque">
                         <h3>Oficina</h3>

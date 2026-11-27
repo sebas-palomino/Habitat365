@@ -39,6 +39,111 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
+.contenedor-formulario {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    max-width: 600px;
+    margin: 2rem auto;
+    border-top: 5px solid #385e4c;
+    /* Verde principal de tu navbar */
+}
+
+.contenedor-formulario h3 {
+    color: #2c4a3b;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.contenedor-formulario p {
+    color: #555;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.formulario-habitat {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.campo-fila {
+    display: flex;
+    gap: 1rem;
+}
+
+.campo-fila .campo-grupo {
+    flex: 1;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.campo-grupo label {
+    font-weight: 600;
+    color: #2c4a3b;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.campo-grupo input,
+.campo-grupo select,
+.campo-grupo textarea {
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto verde suave al hacer clic en un campo */
+.campo-grupo input:focus,
+.campo-grupo select:focus,
+.campo-grupo textarea:focus {
+    outline: none;
+    border-color: #385e4c;
+    box-shadow: 0 0 0 3px rgba(56, 94, 76, 0.15);
+}
+
+.btn-enviar {
+    background-color: #385e4c;
+    color: #ffffff;
+    border: none;
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 0.5rem;
+}
+
+.btn-enviar:hover {
+    background-color: #2a4739;
+}
+
+.mensaje-exito {
+    background-color: #e6f4ea;
+    color: #1e4620;
+    padding: 0.85rem;
+    border-radius: 8px;
+    border-left: 4px solid #385e4c;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+    .campo-fila {
+        flex-direction: column;
+    }
+}
+
 /* ===== PASO 5: Imágenes fluidas ===== */
 img {
     max-width: 100%;
@@ -862,21 +967,23 @@ header nav a[href="#sorteo"]:hover {
 .cajas .tarjeta {
     padding: 1.5rem;
 }
+
 .tituloP {
     text-align: center;
     color: #263445;
     margin: 30px 0;
     font-size: 28px;
 }
-table {  
+
+table {
     width: 90%;
     margin: 20px auto;
     border-collapse: collapse;
     background-color: white;
     border-radius: 8px;
     overflow: hidden;
-} 
- 
+}
+
 
 th {
     background-color: #263445;
@@ -891,7 +998,8 @@ td {
     border-bottom: 1px solid #e0e0e0;
     text-align: center;
     font-size: 14px;
-} 
+}
+
 /* FILAS ALTERNADAS */
 tbody tr:nth-child(even) {
     background-color: #f8f9fa;
@@ -926,7 +1034,7 @@ tbody tr:hover {
     border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
-} 
+}
 
 .columna-derecha {
     flex: 1;
