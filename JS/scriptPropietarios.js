@@ -1,12 +1,12 @@
 const productos = [
     {
-        propietario: "Jorge soto", bloque: "A", casa: 201 ,fechaPago: "15/07/2023" , estado: "Pendiente"
+        propietario: "Jorge soto", bloque: "A", casa: 201 ,fechaPago: "15/07/2023" , estado: "Pagado"
     },
     {
         propietario: "Felipe Ariza", bloque: "A", casa: 202 ,fechaPago: "20/07/2023" , estado: "Pagado"
     },
     {
-        propietario: "Carlos Martinez", bloque: "A", casa: 203 ,fechaPago: "25/07/2023" , estado: "Pendiente"
+        propietario: "Carlos Martinez", bloque: "A", casa: 203 ,fechaPago: "25/07/2023" , estado: "Pagado"
     },
     {
         propietario: "jose rodriguez", bloque: "A", casa: 204 ,fechaPago: "30/07/2023" , estado: "Pendiente"
@@ -15,7 +15,7 @@ const productos = [
         propietario: "juan perez", bloque: "A", casa: 205 ,fechaPago: "05/08/2023", estado: "Pendiente"
     },
     {
-        propietario: "luz angela", bloque: "A", casa: 206 ,fechaPago: "05/08/2023", estado: "Pendiente"
+        propietario: "luz angela", bloque: "A", casa: 206 ,fechaPago: "05/08/2023", estado: "Pagado"
     },
     {
         propietario: "Sandra Lopez", bloque: "A", casa: 207 ,fechaPago: "05/08/2023", estado: "Mora"
@@ -57,7 +57,7 @@ for (let i = 0; i < productos.length; i++) {
         tdEstado.style.fontWeight = "bold";
     } else {
         fila.classList.add("pagado");
-        tdEstado.textContent = "Pagado";
+        tdEstado.textContent = "Al día";
         tdEstado.style.color = "#155724";
         tdEstado.style.fontWeight = "bold";
     }
