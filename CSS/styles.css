@@ -863,6 +863,71 @@ header nav a[href="#sorteo"]:hover {
     padding: 1.5rem;
 }
 
+.columna-derecha {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.columna-derecha .panel {
+    width: 100%;
+    flex: none;
+}
+
+.historial {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    padding: 20px;
+}
+
+.historial h3 {
+    font-size: 18px;
+    color: #2d5a4c;
+    margin-bottom: 12px;
+}
+
+.item-historial {
+    border-left: 4px solid #ef4444;
+    background-color: #fff7f7;
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.item-historial:last-child {
+    margin-bottom: 0;
+}
+
+.item-historial strong {
+    display: block;
+    color: #1f2e29;
+    text-transform: capitalize;
+    margin-bottom: 4px;
+}
+
+.item-historial span {
+    display: block;
+    color: #475569;
+}
+
+@media (max-width: 800px) {
+    .cal-contenedor {
+        flex-direction: column;
+        padding: 0 12px;
+    }
+
+    .columna-derecha,
+    .historial {
+        width: 100%;
+        flex: none;
+    }
+}
+
 /* ===== PASO 13: Escritorio (1024px en adelante) ===== */
 @media (min-width: 1024px) {
     .hero {
